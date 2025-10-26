@@ -26,9 +26,9 @@ app.add_middleware(
 )
 
 # ---- DB SETUP (SQLite) ----
-//SQLALCHEMY_DATABASE_URL = "sqlite:///./app.db"
+# SQLALCHEMY_DATABASE_URL = "sqlite:///./app.db"
 SQLALCHEMY_DATABASE_URL = "postgresql://fastapi_auth_db_0jjf_user:hPi8Cl80ESARCamjXQ4CPXSH9DsP0xcX@dpg-d3uo262li9vc73c8di50-a.oregon-postgres.render.com/fastapi_auth_db_0jjf"
-//engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+# engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
